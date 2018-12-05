@@ -12,6 +12,10 @@ public class Aluguel {
    
     private String nome,aprovacao;
     private int habilitacao,prazodealuguel;
+    String data;
+
+   
+    
 
     public String getNome() {
         return nome;
@@ -50,12 +54,14 @@ public class Aluguel {
     public boolean solicitacao (boolean solicitacao){
          String aux;
         int dia,mes,ano,total,hoje;
-       aux=JOptionPane.showInputDialog(null,"digite o dia de vencimento");
+       aux=JOptionPane.showInputDialog(null,"digite o dia de vencimento da habilitação");
         dia=Integer.parseInt(aux);
-       aux=JOptionPane.showInputDialog(null,"digite o mes de vencimento");
-        mes=Integer.parseInt(aux);       
-       aux=JOptionPane.showInputDialog(null,"digite o ano de vencimento");
+       aux=JOptionPane.showInputDialog(null,"digite o mes de vencimento da habilitação");
+        mes=Integer.parseInt(aux);  
+       
+       aux=JOptionPane.showInputDialog(null,"digite o ano de vencimento da habilitação");
         ano=Integer.parseInt(aux);
+      
         total=ano*365+mes*30+dia;
         hoje=2018*365+12*30+5;
         hoje=hoje+this.getPrazodealuguel();
@@ -79,11 +85,19 @@ public class Aluguel {
       JOptionPane.showMessageDialog(null,"revisao nescessaria");
     return false;
      }     
+    /* public void  entrega (){
+         
+         
+         System.out.println("devolução prevista "+ data);
+         
+         
+         
+     }*/
     
 
     @Override
     public String toString() {
-        return "Aluguel: " +"\n"+ "nome= " + nome + " prazo do aluguel(dias) = " + prazodealuguel + " habilitacao= " + habilitacao + "situação do pedido: "+ this.getAprovacao() ;
+        return "Aluguel: " +"\n"+ "nome= " + nome + "/ prazo do aluguel(dias) = " + prazodealuguel + "/ habilitacao= " + habilitacao + " / situação do pedido: "+ this.getAprovacao() ;
     }
     
 }

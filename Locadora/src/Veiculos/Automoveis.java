@@ -1,6 +1,6 @@
 
 package Veiculos;
-import Aluguel.Aluguel;
+
 
 public class Automoveis extends Veiculo {
     private String tamanho,acessorios,tipo;
@@ -66,7 +66,7 @@ public class Automoveis extends Veiculo {
     
      @Override
     public String toString() {
-        return "Automovel " + " tamanho= " + tamanho + "\n"+ ", acessorios= " + acessorios + ", tipo= " + tipo + " numero de passageiros= " + passageiros + " numero de portas portas= " + portas ;
+        return "Automovel " + " tamanho= " + tamanho + "\n"+ ", acessorios= " + acessorios + "\n"+ " tipo= "+  tipo + " numero de passageiros= " + passageiros + " numero de portas portas= " + portas ;
     }
     
     public void  p3(){
@@ -104,4 +104,4 @@ public class Automoveis extends Veiculo {
 
    
     
-}
+
